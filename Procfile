@@ -1,0 +1,1 @@
+worker: python potatkovbotv2.py
