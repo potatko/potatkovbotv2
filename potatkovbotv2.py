@@ -23,6 +23,7 @@ async def jebaited(ctx):
     await ctx.send("https://www.youtube.com/watch?v=d1YBv2mWll0")
 
 @client.command()
+@commands.has_permission(move_members=True)
 async def clear(ctx, ammount = 5):
     deleted = await ctx.channel.purge(limit=int(ammount))
     await ctx.send("Vymazané {} správy, ktoré už nikto neuvidí".format(len(deleted)))
