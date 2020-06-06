@@ -1,6 +1,7 @@
 import discord
 import random
 from discord.ext import commands
+import youtube_dl
 
 
 client = commands.Bot(command_prefix = ".")
@@ -18,6 +19,11 @@ async def on_member_join(member):
 async def on_member_remove(member):
     print(f"{member} vypadol het F in a chat")
 
+@client.event
+async def on_command_error(ctx, error):
+    if isinstance(error, commands.CommandNotFound):
+        await ctx.send("Neexistuje!")
+
 
 @client.command()
 async def jebaited(ctx):
@@ -28,6 +34,12 @@ async def jebaited(ctx):
 async def clear(ctx, ammount = 5):
     deleted = await ctx.channel.purge(limit=int(ammount))
     await ctx.send("Vymazané {} správy, ktoré už nikto neuvidí".format(len(deleted)))
+
+@clear.error
+async def clear_error(ctx, error):
+    if isinstance(error, commands.MissingAnyRole):
+        await ctx.send("Prepáč vyzerá to, že nemáš povolenie na tento príkaz. :)")
+
 
 @client.command()
 async def spid(ctx):
@@ -40,6 +52,7 @@ async def spoiler(ctx):
 @client.command()
 async def potato(ctx):
     await ctx.send("je frajer")
+
 
 @client.command()
 async def ban(ctx):
@@ -74,7 +87,9 @@ async def sirena(ctx):
 
 @client.command()
 async def rockefel(ctx):
-    await ctx.send("https://www.youtube.com/watch?v=hjGZLnja1o8\n-play rockefeller street nightcore")
+    ctx.voice_client.play("https://www.youtube.com/watch?v=hjGZLnja1o8")
+    await discord.VoiceChannel.connect
+    await ctx.send("https://www.youtube.com/watch?v=hjGZLnja1o8")
 
 
 
