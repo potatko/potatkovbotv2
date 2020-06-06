@@ -87,8 +87,9 @@ async def sirena(ctx):
 
 @client.command()
 async def rockefel(ctx):
+    channel = discord.VoiceChannel
+    await channel.connect
     ctx.voice_client.play("https://www.youtube.com/watch?v=hjGZLnja1o8")
-    await discord.VoiceChannel.connect
     await ctx.send("https://www.youtube.com/watch?v=hjGZLnja1o8")
 
 
