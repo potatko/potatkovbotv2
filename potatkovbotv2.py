@@ -3,11 +3,11 @@ import random
 from discord.ext import commands
 
 
-
 client = commands.Bot(command_prefix = ".")
 
 @client.event
 async def on_ready():
+    await client.change_presence(activity=discord.Game(".help <3"))
     print("Ideme na to :)")
 
 @client.event
@@ -17,6 +17,7 @@ async def on_member_join(member):
 @client.event
 async def on_member_remove(member):
     print(f"{member} vypadol het F in a chat")
+
 
 @client.command()
 async def jebaited(ctx):
