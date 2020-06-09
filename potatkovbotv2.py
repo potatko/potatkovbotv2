@@ -29,9 +29,9 @@ async def pravidla(ctx):
     embed = discord.Embed(
         title= "Pravidlá",
         description= "1. Nehraj Fortnite(Perma-ban)\n2. NEHRAJ GROWTOPIU (BAN)\n3. NEBUD RASISTICKY iba joky su povolené (KICK)\n4. DUSAN JE BOT (KICK)\n5. POTATO NEVIE NIC (PERMA-BAN)\n6.NEMENTE VECI (NIC)\n7.DUSAN VYMYSLEL ROLNICKY (TO NENI PRAVDA)\n8.POTATO- MA DVOJNIKA (TRUE)\n9.TOMAS JE DLHO OBED(30MINUT)\n10.VSETCI SME BOTI OKREM POTATA(lebo dal misiu)\n11.NEVYMSLAJ SI (PERMA-BAN)\nAK MATE PROBLEM NAPISTE NAM NA 24/7 SUPPORT: kamaratskyspolok492@gmail.com <:FeelsSupportMan:668208524412715008>",
-        colour= discord.Colour.blue()
+        colour= discord.Colour.blue(),
     )
-    embed.set_image(url="https://cdn.discordapp.com/attachments/435938425196249108/717827879156842538/siren_dance.mp4")
+    embed.set_image(url="https://cdn.discordapp.com/attachments/606128960602112003/719836984276680844/pravidla-300x300.png")
     await ctx.send(embed=embed)
 @client.command()
 async def jebaited(ctx):
