@@ -26,8 +26,12 @@ async def on_command_error(ctx, error):
 
 @client.command()
 async def pravidla(ctx):
-    await ctx.send("1. Nehraj Fortnite(Perma-ban\n2. NEHRAJ GROWTOPIU (BAN)\n3. NEBUD RASISTICKY iba joky su povolené (KICK)\n4. DUSAN JE BOT (KICK)\n5. POTATO NEVIE NIC (PERMA-BAN)\n6.NEMENTE VECI (NIC)\n7.DUSAN VYMYSLEL ROLNICKY (TO NENI PRAVDA)\n8.POTATO- MA DVOJNIKA (TRUE)\n9.TOMAS JE DLHO OBED(30MINUT)\n10.VSETCI SME BOTI OKREM POTATA(lebo dal misiu)\n11.NEVYMSLAJ SI (PERMA-BAN)\nAK MATE PROBLEM NAPISTE NAM NA 24/7 SUPPORT: kamaratskyspolok492@gmail.com \:FeelsSupportMan:")
-
+    embed = discord.Embed(
+        title= "Pravidlá",
+        description= "1. Nehraj Fortnite(Perma-ban)\n2. NEHRAJ GROWTOPIU (BAN)\n3. NEBUD RASISTICKY iba joky su povolené (KICK)\n4. DUSAN JE BOT (KICK)\n5. POTATO NEVIE NIC (PERMA-BAN)\n6.NEMENTE VECI (NIC)\n7.DUSAN VYMYSLEL ROLNICKY (TO NENI PRAVDA)\n8.POTATO- MA DVOJNIKA (TRUE)\n9.TOMAS JE DLHO OBED(30MINUT)\n10.VSETCI SME BOTI OKREM POTATA(lebo dal misiu)\n11.NEVYMSLAJ SI (PERMA-BAN)\nAK MATE PROBLEM NAPISTE NAM NA 24/7 SUPPORT: kamaratskyspolok492@gmail.com <:668208524412715008:>",
+        colour= discord.Colour.blue()
+    )
+    await ctx.send(embed=embed)
 @client.command()
 async def jebaited(ctx):
     await ctx.send("https://www.youtube.com/watch?v=d1YBv2mWll0")
