@@ -24,6 +24,9 @@ async def on_command_error(ctx, error):
     if isinstance(error, commands.CommandNotFound):
         await ctx.send("Neexistuje!")
 
+@client.command()
+async def pravidla(ctx):
+    await ctx.send("1. Nehraj Fortnite(Perma-ban\n2. NEHRAJ GROWTOPIU (BAN)\n3. NEBUD RASISTICKY iba joky su povolené (KICK)\n4. DUSAN JE BOT (KICK)\n5. POTATO NEVIE NIC (PERMA-BAN)\n6.NEMENTE VECI (NIC)\n7.DUSAN VYMYSLEL ROLNICKY (TO NENI PRAVDA)\n8.POTATO- MA DVOJNIKA (TRUE)\n9.TOMAS JE DLHO OBED(30MINUT)\n10.VSETCI SME BOTI OKREM POTATA(lebo dal misiu)\n11.NEVYMSLAJ SI (PERMA-BAN)\nAK MATE PROBLEM NAPISTE NAM NA 24/7 SUPPORT: kamaratskyspolok492@gmail.com :FeelsSupportMan:")
 
 @client.command()
 async def jebaited(ctx):
@@ -88,7 +91,6 @@ async def sirena(ctx):
 @client.command()
 async def rockefel(ctx):
     await ctx.send("https://www.youtube.com/watch?v=hjGZLnja1o8")
-
 
 
 
