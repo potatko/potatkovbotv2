@@ -75,6 +75,10 @@ async def rngveta(ctx):
     "gei",
     "fukár",
     "radiator",
+    "feťák",
+    "neviem",
+    "feťák dušan",
+    "uga buga"
     ]
     await ctx.send(f"{member} je {random.choice(vecicky)}.")
 
@@ -84,8 +88,8 @@ async def ban(ctx):
     await ctx.send("chceš")
 
 @client.command()
-async def rng(ctx):
-    await ctx.send(f"Tu máš číslo z neba: {random.randint(1, 5)}")
+async def rng(ctx, *, num1, num2):
+    await ctx.send(f"Tu máš číslo z neba: {random.randint(num1, num2)}")
 
 @client.command()
 async def L(ctx):
