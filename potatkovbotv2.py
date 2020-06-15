@@ -4,6 +4,7 @@ from discord.ext import commands
 
 
 
+
 client = commands.Bot(command_prefix = ".")
 
 @client.event
@@ -15,6 +16,7 @@ async def on_ready():
 async def on_member_join(member):
     print(f"{member} zavítal na Kamarátsky spolok vitaj degeš")
 
+
 @client.event
 async def on_member_remove(member):
     print(f"{member} vypadol het F in a chat")
@@ -23,6 +25,8 @@ async def on_member_remove(member):
 async def on_command_error(ctx, error):
     if isinstance(error, commands.CommandNotFound):
         await ctx.send("Neexistuje!")
+
+
 
 @client.command()
 async def pravidla(ctx):
@@ -33,6 +37,7 @@ async def pravidla(ctx):
     )
     embed.set_image(url="https://cdn.discordapp.com/attachments/606128960602112003/719836984276680844/pravidla-300x300.png")
     await ctx.send(embed=embed)
+
 @client.command()
 async def jebaited(ctx):
     await ctx.send("https://www.youtube.com/watch?v=d1YBv2mWll0")
@@ -60,6 +65,18 @@ async def spoiler(ctx):
 @client.command()
 async def potato(ctx):
     await ctx.send("je frajer")
+
+@client.command()
+async def rngveta(ctx):
+    member = ctx.message.author
+
+    vecicky = ["slabko",
+    "silný",
+    "gei",
+    "fukár",
+    "radiator",
+    ]
+    await ctx.send(f"{member} je {random.choice(vecicky)}.")
 
 
 @client.command()
