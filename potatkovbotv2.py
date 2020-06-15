@@ -67,6 +67,56 @@ async def potato(ctx):
     await ctx.send("je frajer")
 
 @client.command()
+async def wierd(ctx):
+    images = ["https://www.youtube.com/watch?v=Twv3bEFddNM",
+    "https://cdn.discordapp.com/attachments/707526343881130074/722127187100303432/graham-crashes-hed-2016.png",
+    "https://cdn.discordapp.com/attachments/707526343881130074/722127363520856125/aa6b6c3760973e663d0ac8d85c593cf5.png",
+    "https://cdn.discordapp.com/attachments/707526343881130074/722127641708200016/cursed-image-mammal.png",
+    "https://cdn.discordapp.com/attachments/707526343881130074/722127733261336650/86081446-1569859251.png",
+    "https://cdn.discordapp.com/attachments/707526343881130074/722127976879095849/images.png",
+    "https://cdn.discordapp.com/attachments/707526343881130074/722128014791671808/images.png",
+    "https://cdn.discordapp.com/attachments/707526343881130074/722128080638050444/images.png",
+    "https://cdn.discordapp.com/attachments/707526343881130074/722128121599623289/images.png",
+    "https://cdn.discordapp.com/attachments/707526343881130074/722128163538206870/85807145.png",
+    "https://cdn.discordapp.com/attachments/707526343881130074/722128242869403693/tumblr_static_tumblr_static_64gyg0zlygsgo0skwgc488cw8_640.png",
+    "https://cdn.discordapp.com/attachments/707526343881130074/722128355066904677/0abb9b4326b23eee7d49009ede9c757c86919dd2r1-280-512v2_hq.png",
+    "https://cdn.discordapp.com/attachments/707526343881130074/722128355066904677/0abb9b4326b23eee7d49009ede9c757c86919dd2r1-280-512v2_hq.png",
+    "https://cdn.discordapp.com/attachments/707526343881130074/722128398796849162/images.png",
+    "https://cdn.discordapp.com/attachments/707526343881130074/722128476479684639/cursed-image-creepy-simba-scene-with-a-cat.png",
+    "https://cdn.discordapp.com/attachments/707526343881130074/722128543617646712/7f51db4ca8ee839c60a035e84385a2ac.png",
+    "https://cdn.discordapp.com/attachments/707526343881130074/722128585246375946/frclj57p5sg31.png",
+    "https://cdn.discordapp.com/attachments/707526343881130074/722128631010426950/images.png",
+    "https://cdn.discordapp.com/attachments/707526343881130074/722128688946085998/images.png",
+    "https://cdn.discordapp.com/attachments/707526343881130074/722128787566886952/839a7a2c-06a9-48ce-a729-c0052ce60254.png",
+    "https://cdn.discordapp.com/attachments/707526343881130074/722128824526962728/Whatexactlymakesanimagecursedihaveseena_b10d304b43cf52b2a608d6a74d50ddab.png",
+    "https://cdn.discordapp.com/attachments/707526343881130074/722128866717597786/images.png",
+    "https://cdn.discordapp.com/attachments/707526343881130074/722128902088294521/80GeRMz.png",
+    "https://cdn.discordapp.com/attachments/707526343881130074/722128949559165420/37803505_215388009143524_4193577716735279104_n.png",
+    "https://cdn.discordapp.com/attachments/707526343881130074/722129010842271864/154c69007777e25e675529490444.png",
+    "https://cdn.discordapp.com/attachments/707526343881130074/722129053871636630/Cursed_3-1.png",
+    "https://cdn.discordapp.com/attachments/707526343881130074/722129101560741928/images.png",
+    "https://cdn.discordapp.com/attachments/707526343881130074/722129150684692600/19-pictures-literally-no-one-on-the-internet-should-be-allowed-to-see-15.png",
+    "https://cdn.discordapp.com/attachments/707526343881130074/722129204740620428/97548446_571345427094283_8583434494119059856_n.png",
+    "https://cdn.discordapp.com/attachments/707526343881130074/722129242430636202/images.png",
+    "https://cdn.discordapp.com/attachments/707526343881130074/722129406746689556/images.png",
+    "https://cdn.discordapp.com/attachments/707526343881130074/722129456071835688/images.png",
+    "https://cdn.discordapp.com/attachments/707526343881130074/722129515962302584/97538653_262814854908981_4183346867751864855_n.png",
+    "https://cdn.discordapp.com/attachments/707526343881130074/722129549470597180/images.png",
+    "https://cdn.discordapp.com/attachments/707526343881130074/722129588213383188/images.png",
+    "https://cdn.discordapp.com/attachments/707526343881130074/722129924517003294/85668697.png",
+    "https://cdn.discordapp.com/attachments/707526343881130074/722130100283244655/images.png",
+    "https://cdn.discordapp.com/attachments/707526343881130074/722130170873512046/images.png",
+    "https://cdn.discordapp.com/attachments/707526343881130074/722130396376203404/64add296f4048298c76ce3e377283893.png",
+    "https://cdn.discordapp.com/attachments/707526343881130074/722130586465992826/origin.png",
+    "https://cdn.discordapp.com/attachments/707526343881130074/722130613758328903/300644661340201.png",
+    "https://cdn.discordapp.com/attachments/707526343881130074/722130876086878258/weird-pig.png",
+    "https://cdn.discordapp.com/attachments/707526343881130074/722130943573229608/images.png",
+    "https://cdn.discordapp.com/attachments/707526343881130074/722130988960055386/367c71d6c561978056603ea5bdbd4370.png",
+    "https://cdn.discordapp.com/attachments/707526343881130074/722131036930310154/sub-buzz-9885-1538862184-1.png",
+    ]
+    await ctx.send(f"{random.choise(images)}")
+
+@client.command()
 async def rngveta(ctx):
     member = ctx.message.author
 
@@ -88,8 +138,8 @@ async def ban(ctx):
     await ctx.send("chceš")
 
 @client.command()
-async def rng(ctx, *, num1, num2):
-    await ctx.send(f"Tu máš číslo z neba: {random.randint(num1, num2)}")
+async def rng(ctx):
+    await ctx.send(f"Tu máš číslo z neba: {random.randint(1, 5)}")
 
 @client.command()
 async def L(ctx):
