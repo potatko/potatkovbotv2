@@ -114,7 +114,7 @@ async def wierd(ctx):
     "https://cdn.discordapp.com/attachments/707526343881130074/722130988960055386/367c71d6c561978056603ea5bdbd4370.png",
     "https://cdn.discordapp.com/attachments/707526343881130074/722131036930310154/sub-buzz-9885-1538862184-1.png",
     ]
-    await ctx.send(f"{random.choise(images)}")
+    await ctx.send(f"{random.choice(images)}")
 
 @client.command()
 async def rngveta(ctx):
