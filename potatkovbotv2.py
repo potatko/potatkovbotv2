@@ -1,6 +1,10 @@
 import discord
 import random
+import shutil
+import asyncio
+import os
 from discord.ext import commands
+from discord.utils import get
 
 
 
@@ -53,6 +57,29 @@ async def clear_error(ctx, error):
     if isinstance(error, commands.MissingAnyRole):
         await ctx.send("Prepáč vyzerá to, že nemáš povolenie na tento príkaz. :)")
 
+
+@client.command(pass_context=True)
+async def join(ctx):
+    global voice
+    channel = ctx.message.author.voice.channel
+    voice = get(client.voice_clients, guild=ctx.guild)
+
+    if voice and voice.is_connected():
+        await voice.move_to(channel)
+    else:
+        voice = await channel.connect()
+    await ctx.send(f"Pripojil som sa do {channel}")
+
+@client.command(pass_context=True)
+async def leave(ctx):
+    channel = ctx.message.author.voice.channel
+    voice = get(client.voice_clients, guild=ctx.guild)
+
+    if voice and voice.is_connected():
+        await voice.disconnect()
+        await ctx.send (f"Odpojil som sa z {channel}")
+
+    
 
 @client.command()
 async def spid(ctx):
@@ -132,6 +159,8 @@ async def rngveta(ctx):
     "uga buga"
     ]
     await ctx.send(f"{member} je {random.choice(vecicky)}.")
+
+
 
 
 @client.command()
