@@ -67,7 +67,7 @@ async def potato(ctx):
     await ctx.send("je frajer")
 
 @client.command()
-async def wierd(ctx):
+async def weird(ctx):
     images = ["https://www.youtube.com/watch?v=Twv3bEFddNM",
     "https://cdn.discordapp.com/attachments/707526343881130074/722127187100303432/graham-crashes-hed-2016.png",
     "https://cdn.discordapp.com/attachments/707526343881130074/722127363520856125/aa6b6c3760973e663d0ac8d85c593cf5.png",
@@ -117,6 +117,7 @@ async def wierd(ctx):
     "https://cdn.discordapp.com/attachments/707526343881130074/722185312364789771/weird-kids-youtube.png",
     "https://cdn.discordapp.com/attachments/707526343881130074/722185165660749914/5aaa1cc4c422b-funny-weird-wtf-stock-photos-28-5a3a5b135f099__700.png",
     ]
+    
     await ctx.send(f"{random.choice(images)}")
 
 @client.command()
