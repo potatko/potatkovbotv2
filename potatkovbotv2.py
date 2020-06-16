@@ -55,10 +55,11 @@ async def clear(ctx, ammount = 5):
 @clear.error
 async def clear_error(ctx, error):
     if isinstance(error, commands.MissingAnyRole):
-        await ctx.send("Prepáč vyzerá to, že nemáš povolenie na tento príkaz. :)")
+        await ctx.send("Prepáč vyzerá to, že nemáš povolenie na tento príkaz. (STAFF) :)")
 
 
 @client.command(pass_context=True)
+@commands.has_any_role("DJ")
 async def join(ctx):
     global voice
     channel = ctx.message.author.voice.channel
@@ -70,7 +71,13 @@ async def join(ctx):
         voice = await channel.connect()
     await ctx.send(f"Pripojil som sa do {channel}")
 
+@join.error
+async def join_error(ctx, error):
+    if isinstance(error, commands.MissingAnyRole):
+        await ctx.send("Prepáč vyzerá to, že nemáš povolenie na tento príkaz. (DJ) :)")
+
 @client.command(pass_context=True)
+@commands.has_any_role("DJ")
 async def leave(ctx):
     channel = ctx.message.author.voice.channel
     voice = get(client.voice_clients, guild=ctx.guild)
@@ -78,6 +85,11 @@ async def leave(ctx):
     if voice and voice.is_connected():
         await voice.disconnect()
         await ctx.send (f"Odpojil som sa z {channel}")
+
+@leave.error
+async def leave_error(ctx, error):
+    if isinstance(error, commands.MissingAnyRole):
+        await ctx.send("Prepáč vyzerá to, že nemáš povolenie na tento príkaz. (DJ) :)")
 
     
 
