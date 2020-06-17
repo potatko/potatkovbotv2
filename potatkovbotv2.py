@@ -18,6 +18,9 @@ async def on_ready():
 
 @client.event
 async def on_member_join(member):
+    ROLE = "Kamarát"
+    role = get(member.guild.roles, name=ROLE)
+    await member.add_roles(role)
     print(f"{member} zavítal na Kamarátsky spolok vitaj degeš")
 
 
