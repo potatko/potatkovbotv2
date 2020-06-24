@@ -157,7 +157,8 @@ async def weird(ctx):
     "https://cdn.discordapp.com/attachments/707526343881130074/722131036930310154/sub-buzz-9885-1538862184-1.png",
     "https://cdn.discordapp.com/attachments/707526343881130074/722185379028926474/Like-Your-Manicures-Weird-Then-This-is-the-Instagram-Account-to-Follow.png",
     "https://cdn.discordapp.com/attachments/707526343881130074/722185312364789771/weird-kids-youtube.png",
-    "https://cdn.discordapp.com/attachments/707526343881130074/722185165660749914/5aaa1cc4c422b-funny-weird-wtf-stock-photos-28-5a3a5b135f099__700.png"
+    "https://cdn.discordapp.com/attachments/707526343881130074/722185165660749914/5aaa1cc4c422b-funny-weird-wtf-stock-photos-28-5a3a5b135f099__700.png",
+    "https://cdn.discordapp.com/attachments/606128960602112003/725426986859626606/Macintosh_128k_transparency.png"
     ]
     
     await ctx.send(f"{random.choice(images)}")
