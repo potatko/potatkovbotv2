@@ -191,11 +191,6 @@ async def ban(ctx, member : discord.Member, *, reason = None):
         await member.ban(reason = reason)
 
 
-@client.command()
-@commands.has_permissions(ban_members = True)
-async def unban (ctx, *, member: discord.Member):
-    await ctx.member.unban()
-
 
 @client.command()
 async def banL(ctx):
