@@ -180,11 +180,28 @@ async def rngveta(ctx):
     await ctx.send(f"{member} je {random.choice(vecicky)}.")
 
 
+@client.command()
+@commands.has_permissions(ban_members = True)
+async def ban(ctx, member : discord.Member, *, reason = None):
+    if reason == None:
+        await ctx.send(f"{ctx.member.author} pridaj dôvod plz :)")
+    else:
+        spravaop = f"You have been banned from {ctx.guild.name} for {reason}!"
+        await member.send(spravaop)
+        await member.ban(reason = reason)
 
 
 @client.command()
-async def ban(ctx):
+@commands.has_permissions(ban_members = True)
+async def unban (ctx, *, member: discord.Member):
+    await ctx.member.unban()
+
+
+@client.command()
+async def banL(ctx):
     await ctx.send("chceš")
+
+
 
 @client.command()
 async def rng(ctx):
