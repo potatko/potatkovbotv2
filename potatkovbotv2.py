@@ -180,7 +180,7 @@ async def rngveta(ctx):
     await ctx.send(f"{member} je {random.choice(vecicky)}.")
 
 
-@clietn.command()
+@client.command()
 @commands.has_permissions(ban_member = True)
 async def ban(ctx, member : discord.Member, reason=None):
     
