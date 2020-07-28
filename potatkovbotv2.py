@@ -1,3 +1,4 @@
+import math
 import discord
 import random
 import shutil
@@ -18,9 +19,6 @@ async def on_ready():
 
 @client.event
 async def on_member_join(member):
-    ROLE = "Kamarát"
-    role = get(member.guild.roles, name=ROLE)
-    await member.add_roles(role)
     print(f"{member} zavítal na Kamarátsky spolok vitaj degeš")
 
 
@@ -180,10 +178,23 @@ async def rngveta(ctx):
     await ctx.send(f"{member} je {random.choice(vecicky)}.")
 
 
+@client.command()
+async def calculate(ctx, num1, num2, operacia):
+    if operacia == "*":
+        await ctx.send(f"{num1} * {num2} ")
+    elif operacia == "+":
+        await ctx.send(f"{num1} + {num2}")
+    elif operacia == "/":
+        await ctx.send (f"{num1} / {num2}")
+    elif operacia == "-":
+        await ctx.send(f"{num1} - {num2}")
+    
+    
+
 
 
 @client.command()
-async def banL(ctx):
+async def ban(ctx):
     await ctx.send("chceš")
 
 
