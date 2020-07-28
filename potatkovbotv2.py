@@ -48,7 +48,7 @@ async def jebaited(ctx):
     await ctx.send("https://www.youtube.com/watch?v=d1YBv2mWll0")
 
 @client.command()
-@commands.has_any_role("Staff", "Moooover")
+@commands.has_permissions(manage_messages=True)
 async def clear(ctx, ammount = 5):
     deleted = await ctx.channel.purge(limit=int(ammount))
     await ctx.send("Vymazané {} správy, ktoré už nikto neuvidí".format(len(deleted)))
@@ -56,7 +56,7 @@ async def clear(ctx, ammount = 5):
 @clear.error
 async def clear_error(ctx, error):
     if isinstance(error, commands.MissingAnyRole):
-        await ctx.send("Prepáč vyzerá to, že nemáš povolenie na tento príkaz. (STAFF) :)")
+        await ctx.send("Prepáč vyzerá to, že nemáš povolenie na tento príkaz. (manage_messages) :)")
 
 
 @client.command(pass_context=True)
