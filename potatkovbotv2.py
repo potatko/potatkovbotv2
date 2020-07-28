@@ -181,13 +181,13 @@ async def rngveta(ctx):
 @client.command()
 async def calculate(ctx, num1, num2, operacia):
     if operacia == "*":
-        await ctx.send(num1 * num2 )
+        await ctx.send(f"{float(num1)} * {float(num2)}" )
     elif operacia == "+":
-        await ctx.send(num1 + num2)
+        await ctx.send(f"{float(num1)} + {float(num2)}")
     elif operacia == "/":
-        await ctx.send (num1 / num2)
+        await ctx.send (f"{float(num1)} / {float(num2)}")
     elif operacia == "-":
-        await ctx.send(num1 - num2)
+        await ctx.send(f"{float(num1)} - {float(num2)}")
     
     
 
