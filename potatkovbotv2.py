@@ -200,8 +200,8 @@ async def ban(ctx):
 
 
 @client.command()
-async def rng(ctx):
-    await ctx.send(f"Tu máš číslo z neba: {random.randint(1, 5)}")
+async def rng(ctx, num1r, num2r):
+    await ctx.send(f"Tu máš číslo z neba: {random.randint(int(num1r), int(num2r))}")
 
 @client.command()
 async def L(ctx):
