@@ -31,6 +31,19 @@ async def on_command_error(ctx, error):
     if isinstance(error, commands.CommandNotFound):
         await ctx.send("Neexistuje!")
 
+@client.command()
+async def filip(ctx):
+    filipfotky = ["https://cdn.discordapp.com/attachments/619603366208602143/743039055402631188/filip_tvar.png",
+    "https://cdn.discordapp.com/attachments/619603366208602143/743039378741526548/filip.jpg",
+    "https://media.discordapp.net/attachments/606128960602112003/738472030587846751/Screenshot_20200730_220357_com.discord.jpg?width=126&height=270"]
+    embed = discord.Embed(
+        title= "Filip",
+        description= "Filip",
+        colour= discord.Colour.orange(),
+    )
+    embed.set_image(url=f"{random.choice(filipfotky)}")
+    await ctx.send(embed=embed)
+
 
 
 @client.command()
