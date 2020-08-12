@@ -33,9 +33,10 @@ async def on_command_error(ctx, error):
 
 @client.command()
 async def filip(ctx):
-    filipfotky = ["https://cdn.discordapp.com/attachments/619603366208602143/743039055402631188/filip_tvar.png",
-    "https://cdn.discordapp.com/attachments/619603366208602143/743039378741526548/filip.jpg",
-    "https://media.discordapp.net/attachments/606128960602112003/738472030587846751/Screenshot_20200730_220357_com.discord.jpg?width=126&height=270"]
+    filipfotky = ["https://cdn.discordapp.com/attachments/606128960602112003/743042689234370640/filip_tvar.png",
+    "https://cdn.discordapp.com/attachments/606128960602112003/743042532589436948/filip.jpg",
+    "https://cdn.discordapp.com/attachments/606128960602112003/738472030587846751/Screenshot_20200730_220357_com.discord.jpg",
+    "https://cdn.discordapp.com/attachments/606128960602112003/735203285211807855/0IuBsG_qKU6Pf3yf2YpbYw_0_0.png", ]
     
     await ctx.send(f"{random.choice(filipfotky)}")
 
