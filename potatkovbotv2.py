@@ -19,6 +19,7 @@ async def on_ready():
 
 @client.event
 async def on_member_join(member):
+    
     print(f"{member} zavítal na Kamarátsky spolok vitaj degeš")
 
 
@@ -190,13 +191,13 @@ async def rngveta(ctx):
 @client.command()
 async def calculate(ctx, num1, num2, operacia):
     if operacia == "*":
-        await ctx.send(f"{float(num1)} * {float(num2)}" )
+        await ctx.send(f"{num1} * {num2}" )
     elif operacia == "+":
-        await ctx.send(f"{float(num1)} + {float(num2)}")
+        await ctx.send(f"{num1} + {num2}")
     elif operacia == "/":
-        await ctx.send (f"{float(num1)} / {float(num2)}")
+        await ctx.send (f"{num1} / {num2}")
     elif operacia == "-":
-        await ctx.send(f"{float(num1)} - {float(num2)}")
+        await ctx.send(f"{num1} - {num2}")
     
     
 
