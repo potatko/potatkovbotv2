@@ -42,7 +42,9 @@ async def filip(ctx):
     
     await ctx.send(f"{random.choice(filipfotky)}")
 
-
+@client.command()
+async def dolezite(ctx):
+    await ctx.send("#rolničky")
 
 @client.command()
 async def pravidla(ctx):
