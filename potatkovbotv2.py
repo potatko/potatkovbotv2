@@ -47,6 +47,10 @@ async def dolezite(ctx):
     await ctx.send("#rolničky")
 
 @client.command()
+async def paket(ctx):
+    await ctx.send("https://cdn.discordapp.com/attachments/606128960602112003/752975372701794425/PaketPhoenix2.mp4")
+
+@client.command()
 async def pravidla(ctx):
     embed = discord.Embed(
         title= "Pravidlá",
