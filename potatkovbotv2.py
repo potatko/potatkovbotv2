@@ -54,7 +54,7 @@ async def paket(ctx):
 async def pravidla(ctx):
     embed = discord.Embed(
         title= "Pravidlá",
-        description= "1.Nehraj Fortnite(Inak si decky gejko a mirka ta nema rada)\n2.Mirka big PP(69cm)\n3.warframe do klietky hanby(BAN)\n4.Nebud kokot(perma-bun)\n5.Keď ti žena povie že máš byť kurva ticho tak budeš ticho(<3)\n6..paket\n7ady varga pije\nAK MATE PROBLEM NAPISTE NAM NA 24/7 SUPPORT: kamaratskyspolok492@gmail.com <:FeelsSupportMan:668208524412715008>",
+        description= "1.Nehraj Fortnite(Inak si decky gejko a mirka ta nema rada)\n2.Mirka big PP(69cm)\n3.warframe do klietky hanby(BAN)\n4.Nebud kokot(perma-bun)\n5.Keď ti žena povie že máš byť kurva ticho tak budeš ticho(<3)\n6..paket\n7. ady varga pije\nAK MATE PROBLEM NAPISTE NAM NA 24/7 SUPPORT: kamaratskyspolok492@gmail.com <:FeelsSupportMan:668208524412715008>",
         colour= discord.Colour.blue(),
     )
     embed.set_image(url="https://cdn.discordapp.com/attachments/606128960602112003/743036789371174912/jajo1.png")
