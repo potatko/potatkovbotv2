@@ -35,7 +35,7 @@ async def on_command_error(ctx, error):
 @client.command()
 async def filip(ctx):
     filipfotky = ["https://cdn.discordapp.com/attachments/721757184261881896/744242375802486904/filip_tvar.png",
-    "https://cdn.discordapp.com/attachments/721757184261881896/744242509156319272/filip.jpg",
+    "https://cdn.discordapp.com/attachments/606128960602112003/753704410294780004/filip.png",
     "https://cdn.discordapp.com/attachments/606128960602112003/738472030587846751/Screenshot_20200730_220357_com.discord.jpg",
     "https://cdn.discordapp.com/attachments/606128960602112003/735203285211807855/0IuBsG_qKU6Pf3yf2YpbYw_0_0.png",
     "https://cdn.discordapp.com/attachments/310097054426857492/744589199444803594/IMG_20200816_190141.jpg",  ]
@@ -54,7 +54,7 @@ async def paket(ctx):
 async def pravidla(ctx):
     embed = discord.Embed(
         title= "Pravidlá",
-        description= "1. Nehraj Fortnite(Perma-ban)\n2. NEHRAJ GROWTOPIU (BAN)\n3. NEBUD RASISTICKY iba joky su povolené (KICK)\n4. DUSAN JE BOT (KICK)\n5. POTATO NEVIE NIC (PERMA-BAN)\n6.NEMENTE VECI (NIC)\n7.DUSAN VYMYSLEL ROLNICKY (TO NENI PRAVDA)\n8.POTATO- MA DVOJNIKA (TRUE)\n9.TOMAS JE DLHO OBED(30MINUT)\n10.VSETCI SME BOTI OKREM POTATA(lebo dal misiu)\n11.NEVYMSLAJ SI (PERMA-BAN)\n12. Nespievať v generáli(#kino + karaoke)\nAK MATE PROBLEM NAPISTE NAM NA 24/7 SUPPORT: kamaratskyspolok492@gmail.com <:FeelsSupportMan:668208524412715008>",
+        description= "1.Nehraj Fortnite(Inak si decky gejko a mirka ta nema rada)\n2.Mirka big PP(69cm)\n3.warframe do klietky hanby(BAN)\n4.Nebud kokot(perma-bun)\n5.Keď ti žena povie že máš byť kurva ticho tak budeš ticho(<3)\n6..paket\n7ady varga pije\nAK MATE PROBLEM NAPISTE NAM NA 24/7 SUPPORT: kamaratskyspolok492@gmail.com <:FeelsSupportMan:668208524412715008>",
         colour= discord.Colour.blue(),
     )
     embed.set_image(url="https://cdn.discordapp.com/attachments/606128960602112003/743036789371174912/jajo1.png")
