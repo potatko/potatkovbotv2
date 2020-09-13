@@ -51,16 +51,7 @@ async def dolezite(ctx):
 async def paket(ctx):
     await ctx.send("https://cdn.discordapp.com/attachments/606128960602112003/752975372701794425/PaketPhoenix2.mp4")
 
-@client.command()
-async def mirka(ctx):
-    mirkafotkyop = ["https://cdn.discordapp.com/attachments/606128960602112003/753971084935823380/mirkaopu.jpeg",
-    "https://cdn.discordapp.com/attachments/606128960602112003/753971083345920162/mira2.jpg",
-    "https://cdn.discordapp.com/attachments/606128960602112003/753971082079502336/MIRIAM3.jpg",
-    "https://cdn.discordapp.com/attachments/606128960602112003/753971080934457385/miriamNEVIEM.jpg",
-    "https://cdn.discordapp.com/attachments/606128960602112003/753971079349010511/miriamzkysaku.jpg",
-    ]
 
-    await ctx.send(f"{random.choice(mirkafotkyop)}")
 
 
 @client.command()
