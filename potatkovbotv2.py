@@ -56,7 +56,7 @@ async def kpn(ctx, vec):
     veci = ["kameň",
     "papier",
     "nožnice"] 
-    vecrandom = f"random.choice(veci)"
+    vecrandom = f"{random.choice(veci)}"
     
     if vec == "kameň" and vecrandom == "kameň":
         await ctx.send(f"kameň, remíza")
