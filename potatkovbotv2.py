@@ -60,9 +60,22 @@ async def kpn(ctx, vec):
     
     if vec == "kameň" and vecrandom == "kameň":
         await ctx.send(f"kameň, remíza")
-
     elif vec == "kameň" and vecrandom == "nožnice":
-        await ctx.send(f"")
+        await ctx.send(f"nožnice, vyhral si")
+    elif vec == "kameň" and vecrandom == "papier":
+        await ctx.send(f"papier, prehral si")
+    elif vec == "papier" and vecrandom == "papier":
+        await ctx.send("papier, remíza")
+    elif vec == "papier" and vecrandom == "nožnice":
+        await ctx.send("nožnice, prehral si")
+    elif vec == "papier" and vecrandom == "kameň":
+        await ctx.send("kameň, vyhral si")
+    elif vec == "nožnice" and vecrandom == "nožnice":
+        await ctx.send("nožnice, remíza")
+    elif vec == "nožnice" and vecrandom == "kameň":
+        await ctx.send("kameň, prehral si")
+    elif vec == "nožnice" and vecrandom == "papier":
+        await ctx.send("papier, vyhral si")
 
 
 @client.command()
