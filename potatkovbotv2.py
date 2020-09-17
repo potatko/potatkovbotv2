@@ -51,7 +51,18 @@ async def dolezite(ctx):
 async def paket(ctx):
     await ctx.send("https://cdn.discordapp.com/attachments/606128960602112003/752975372701794425/PaketPhoenix2.mp4")
 
+@client.command()
+async def kpn(ctx, vec):
+    veci = ["kameň",
+    "papier",
+    "nožnice"] 
+    vecrandom = f"random.choice(veci)"
+    
+    if vec == "kameň" and vecrandom == "kameň":
+        await ctx.send(f"kameň, remíza")
 
+    elif vec == "kameň" and vecrandom == "nožnice":
+        await ctx.send(f"")
 
 
 @client.command()
