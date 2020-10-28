@@ -49,7 +49,7 @@ async def dolezite(ctx):
 
 @client.command()
 async def paket(ctx):
-    await ctx.send("https://cdn.discordapp.com/attachments/606128960602112003/752975372701794425/PaketPhoenix2.mp4")
+    await ctx.send("https://cdn.discordapp.com/attachments/606128960602112003/768742549904687104/PaketPhoenix2.mp4")
 
 @client.command()
 async def kpn(ctx, vec):
@@ -91,6 +91,24 @@ async def pravidla(ctx):
 @client.command()
 async def jebaited(ctx):
     await ctx.send("https://www.youtube.com/watch?v=d1YBv2mWll0")
+
+
+@client.command()
+async def hi(ctx):
+    await ctx.send("Ahoj!")
+
+@client.command()
+@commands.has_any_role("Staff")
+async def staff(ctx):
+    await ctx.send("Si staff :)")
+
+@staff.error
+async def staff_error(ctx, error):
+    if isinstance(error, commands.MissingAnyRole):
+        await ctx.send("yu no staff kekw")
+        
+
+
 
 @client.command()
 @commands.has_permissions(manage_messages=True)
@@ -235,7 +253,15 @@ async def calculate(ctx, num1, operacia ,num2):
         await ctx.send(float(num1) - float(num2))
     
     
-
+@client.command()
+async def telefon(ctx):
+    embedtel = discord.Embed(
+        title= "Telefón",
+        description= "Potato: 0903 935 990\n Dušan: 0902 070 044\n Panda: 0902 442 229\n Mirka: 0903 350 905\n Maťo: 0917 726 700\n Sima: 0948 620 044\n Tamara: 0908 333 277\n Peťa: 0949 222 967",
+        colour= discord.Colour.blue(),
+    )
+    embedtel.set_image(url="https://www.bilingual.sk/picture/789.jpg")
+    await ctx.send(embed=embedtel)
 
 
 @client.command()
