@@ -257,7 +257,7 @@ async def calculate(ctx, num1, operacia ,num2):
 async def telefon(ctx):
     embedtel = discord.Embed(
         title= "Telefón",
-        description= "Potato: 0903 935 990\n Dušan: 0902 070 044\n Panda: 0902 442 229\n Mirka: 0903 350 905\n Maťo: 0917 726 700\n Sima: 0948 620 044\n Tamara: 0908 333 277\n Peťa: 0949 222 967",
+        description= "Adam: 0944 363 993 \nFilip: 0915 610 520\nBraňo: 0944 629 565\nAndrej: 0907 721 450\nPotato: 0903 935 990\n Dušan: 0902 070 044\n Panda: 0902 442 229\n Mirka: 0903 350 905\n Maťo: 0917 726 700\n Sima: 0948 620 044\n Tamara: 0908 333 277\n Peťa: 0949 222 967",
         colour= discord.Colour.blue(),
     )
     embedtel.set_image(url="https://www.bilingual.sk/picture/789.jpg")
