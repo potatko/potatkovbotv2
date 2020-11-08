@@ -162,7 +162,7 @@ async def spid(ctx):
     await ctx.send(f"uwu som rýchli {round(client.latency * 1000)}ms pogu")
 
 
-@clien.command()
+@client.command()
 async def brnkj(ctx):
     await ctx.send("https://www.twitch.tv/brankoj123")
 
