@@ -161,13 +161,14 @@ async def leave_error(ctx, error):
 async def spid(ctx):
     await ctx.send(f"uwu som rýchli {round(client.latency * 1000)}ms pogu")
 
-@client.command()
-async def spoiler(ctx):
-    await ctx.send("duskov pc je slabý")
 
-@client.command()
-async def potato(ctx):
-    await ctx.send("je frajer")
+@clien.command()
+async def brnkj(ctx):
+    await ctx.send("https://www.twitch.tv/brankoj123")
+
+
+
+
 
 @client.command()
 async def weird(ctx):
