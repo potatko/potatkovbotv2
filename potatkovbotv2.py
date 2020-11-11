@@ -82,7 +82,7 @@ async def kpn(ctx, vec):
 async def pravidla(ctx):
     embed = discord.Embed(
         title= "Pravidlá",
-        description= "1. penis\nAK MATE PROBLEM NAPISTE NAM NA 24/7 SUPPORT: kamaratskyspolok492@gmail.com <:FeelsSupportMan:668208524412715008>",
+        description= "1. :)\nAK MATE PROBLEM NAPISTE NAM NA 24/7 SUPPORT: kamaratskyspolok492@gmail.com <:FeelsSupportMan:668208524412715008>",
         colour= discord.Colour.blue(),
     )
     embed.set_image(url="https://cdn.discordapp.com/attachments/606128960602112003/743036789371174912/jajo1.png")
