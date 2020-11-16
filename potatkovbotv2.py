@@ -108,6 +108,12 @@ async def pp(ctx, *, meno):
     await ctx.send(f"{meno} pp: {random.choice(dlzka)}")
 
 
+@client.command()
+async def gay(ctx, *, meno2):
+    await ctx.send(f"{meno2} je na {random.randint(0, 100)}% gay")
+
+
+
 
 @client.command()
 async def hi(ctx):
