@@ -134,7 +134,7 @@ async def clear(ctx, ammount = 5):
 
 @clear.error
 async def clear_error(ctx, error):
-    if isinstance(error, commands.MissingAnyRole):
+    if isinstance(error, commands.MissingPermissions):
         await ctx.send("Prepáč vyzerá to, že nemáš povolenie na tento príkaz. (manage_messages) :)")
 
 
