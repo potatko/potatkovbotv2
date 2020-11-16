@@ -94,6 +94,22 @@ async def jebaited(ctx):
 
 
 @client.command()
+async def pp(ctx, *, meno):
+    dlzka = ["B=D",
+    "B==D",
+    "B===D",
+    "B====D",
+    "B======D",
+    "B=======D",
+    "B=========D",
+    "B===========D",
+    "B=============D"]
+    
+    await ctx.send(f"{meno} pp: {random.choice(dlzka)}")
+
+
+
+@client.command()
 async def hi(ctx):
     await ctx.send("Ahoj!")
 
