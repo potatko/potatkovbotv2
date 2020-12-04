@@ -325,6 +325,12 @@ async def rockefel(ctx):
     await ctx.send("https://www.youtube.com/watch?v=hjGZLnja1o8")
 
 
+@client.command()
+async def n2(ctx, num1n2):
+    num1n2v = float(num1n2) * float(num1n2)
+    await ctx.send(f"{num1n2v}")
+
+
 
 
 
