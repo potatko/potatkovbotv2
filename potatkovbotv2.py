@@ -330,7 +330,12 @@ async def n2(ctx, num1n2):
     num1n2v = float(num1n2) * float(num1n2)
     await ctx.send(f"{num1n2v}")
 
-
+@client.command()
+async def sq(ctx, numsq, sqnum):
+    numsqfloat = float(numsq)
+    sqnumfloat = float(sqnum)
+    numsq1 = numsqfloat**sqnumfloat
+    await ctx.send(f"{numsq1}")
 
 
 
