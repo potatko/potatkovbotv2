@@ -103,7 +103,8 @@ async def pp(ctx, *, meno):
     "B=======D",
     "B=========D",
     "B===========D",
-    "B=============D"]
+    "B=============D",
+    "B∞D"]
     
     await ctx.send(f"{meno} pp: {random.choice(dlzka)}")
 
