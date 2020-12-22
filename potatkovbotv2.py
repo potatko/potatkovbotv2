@@ -114,7 +114,29 @@ async def gay(ctx, *, meno2):
     await ctx.send(f"{meno2} je na {random.randint(0, 100)}% gay")
 
 
+@client.command()
+async def cisielko(ctx, *, cislo):
+    cisloplus = float(cislo)
+    nula = False
+    kladne = False
 
+
+    if cisloplus == 0:
+        await ctx.send("Zadané číslo je 0")
+    elif cisloplus >0:
+        await ctx.send("Zadané číslo je kladné")
+    elif cisloplus <0:
+        await ctx.send("Zadané číslo je záporné")
+
+    if cisloplus == 0:
+        nula = True
+
+
+    if (cisloplus % 2) == 0 and nula is False:
+        await ctx.send("Zadané čislo je párne")
+        kladne = True
+    elif kladne is False and nula is False:
+        await ctx.send("Zadané číslo je nepárne") 
 
 @client.command()
 async def hi(ctx):
