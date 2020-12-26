@@ -23,6 +23,7 @@ async def on_member_join(member):
     print(f"{member} zavítal na Kamarátsky spolok vitaj degeš")
 
 
+
 @client.event
 async def on_member_remove(member):
     print(f"{member} vypadol het F in a chat")
@@ -91,6 +92,33 @@ async def pravidla(ctx):
 @client.command()
 async def jebaited(ctx):
     await ctx.send("https://www.youtube.com/watch?v=d1YBv2mWll0")
+
+
+@client.command()
+async def rybar(ctx):
+    ryby = ["🐈 catfish",
+    "🐟 rybka",
+    "🦑 squid pog",
+    "🦈 žralok!!! pog",
+    "🐬 jej aky pekny delfín",
+    "🐋 CRAZY RARE CATCH"
+    "🐠 tropical fish :O"
+    "🐡 https://www.youtube.com/watch?v=V2H56R1dus0&ab_channel=AngusWu",
+    "🐉 dračik"]
+
+    cisla = ["1", "2"]
+    
+
+    
+    await ctx.send("🎣 oh whats that ?!")
+    cislovyber = random.choice(cisla)
+    if cislovyber == "1":
+        await ctx.send("rip nic si nechytil")
+    elif cislovyber == "2":
+        await ctx.send(f"{random.choice(ryby)}")
+
+
+
 
 
 @client.command()
