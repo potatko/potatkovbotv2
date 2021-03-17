@@ -43,6 +43,7 @@ async def filip(ctx):
     "https://cdn.discordapp.com/attachments/310097054426857492/754638612842151936/Snapchat-1991353265.jpg",
     "https://cdn.discordapp.com/attachments/315892634549878784/813135037566156811/kok.png",
     "https://cdn.discordapp.com/attachments/315892634549878784/813135064908169286/bot.jpg",
+    "https://cdn.discordapp.com/attachments/821143470654619688/821143499901501470/image0.png",
       ]
     
     await ctx.send(f"{random.choice(filipfotky)}")
@@ -390,6 +391,7 @@ async def sq(ctx, numsq, sqnum):
     sqnumfloat = float(sqnum)
     numsq1 = numsqfloat**sqnumfloat
     await ctx.send(f"{numsq1}")
+
 
 
 
