@@ -335,7 +335,7 @@ async def calculate(ctx, num1, operacia ,num2):
 async def telefon(ctx):
     embedtel = discord.Embed(
         title= "Telefón",
-        description= "tut: 0915 494 688\nAdam: 0944 363 993 \nFilip: 0915 610 520\nBraňo: 0944 629 565\nAndrej: 0907 721 450\nPotato: 0903 935 990\n Dušan: 0902 070 044\n Panda: 0902 442 229\n Mirka: 0903 350 905\n Maťo: 0917 726 700\n Sima: 0948 620 044\n Tamara: 0908 333 277\n Peťa: 0949 222 967",
+        description= "tut: 0915 494 688\nAdam: 0944 363 993 \nFilip: 0915 610 520\nBraňo: 0944 629 565\nAndrej: 0907 721 450\nPotato: 0903 935 990\n Dušan: 0902 070 044\n Panda: 0902 442 229\n Mirka: 0903 350 905\n Maťo: 0917 726 700\n Sima: 0948 620 044\n Tamara: 0908 333 277\n Peťa: 0949 222 967\n Šimon: 0944 897 008",
         colour= discord.Colour.blue(),
     )
     embedtel.set_image(url="https://cdn.discordapp.com/attachments/606128960602112003/774980744170569738/unknown.png")
@@ -392,7 +392,8 @@ async def sq(ctx, numsq, sqnum):
     numsq1 = numsqfloat**sqnumfloat
     await ctx.send(f"{numsq1}")
 
-
+@client.command()
+async def nsn
 
 
 client.run("NzAyOTc2NzU2Nzk3MTQ1MTE4.XtkDtw.sihSFjNieF1notPBTc6zkZpjLQ0")
