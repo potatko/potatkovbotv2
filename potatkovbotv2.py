@@ -114,7 +114,7 @@ async def rybar(ctx):
     
 
     
-    await ctx.send("🎣 oh whats that ?!")
+    await ctx.send("🎣 chytám ryby")
     cislovyber = random.choice(cisla)
     if cislovyber == "1":
         await ctx.send("rip nic si nechytil")
