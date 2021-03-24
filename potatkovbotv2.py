@@ -392,8 +392,6 @@ async def sq(ctx, numsq, sqnum):
     numsq1 = numsqfloat**sqnumfloat
     await ctx.send(f"{numsq1}")
 
-@client.command()
-async def nsn
 
 
 client.run("NzAyOTc2NzU2Nzk3MTQ1MTE4.XtkDtw.sihSFjNieF1notPBTc6zkZpjLQ0")
