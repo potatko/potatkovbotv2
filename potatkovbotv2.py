@@ -87,7 +87,7 @@ async def kpn(ctx, vec):
 async def pravidla(ctx):
     embed = discord.Embed(
         title= "Pravidlá",
-        description= "1. :)\nAK MATE PROBLEM NAPISTE NAM NA 24/7 SUPPORT: kamaratskyspolok492@gmail.com <:FeelsSupportMan:668208524412715008>",
+        description= "1. pravidal:\nnebuď toxic\nveľmi\nrules:\nV-tuber je bad\namuing us memes= ban\n(nieste vtipny stfu)\nautisticke ear-rapy ktore mi odpalia sluchatka do 69. dimenzie= ban\n<:FeelsSupportMan:668208524412715008>",
         colour= discord.Colour.blue(),
     )
     embed.set_image(url="https://cdn.discordapp.com/attachments/606128960602112003/743036789371174912/jajo1.png")
@@ -97,6 +97,15 @@ async def pravidla(ctx):
 async def jebaited(ctx):
     await ctx.send("https://www.youtube.com/watch?v=d1YBv2mWll0")
 
+@client.command()
+async def support(ctx):
+    embed2 = discord.Embed(
+        title= "Support",
+        description= "SUPORT: ak chcete ban abo daco tak piste\nkamaratskyspolok492@gmail.com\ntod: vitko.tom@gmail.com\nbrnkj123: brnkj123@gmail.com\nsinksun: tomasko.jakubec@gmail.com\nextra suppport\nradi pomozeme\n<:FeelsSupportMan:668208524412715008>",
+        colour= discord.Colour.purple(),
+    )
+    embed2.set_image(url= "https://www.nabdsys.com/blogs/wp-content/uploads/2015/11/iStock_000034862400Large-2.jpg")
+    await ctx.send(embed2=embed2)
 
 @client.command()
 async def rybar(ctx):
