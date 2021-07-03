@@ -105,7 +105,7 @@ async def support(ctx):
         colour= discord.Colour.purple(),
     )
     embed2.set_image(url="https://www.nabdsys.com/blogs/wp-content/uploads/2015/11/iStock_000034862400Large-2.jpg")
-    await ctx.send(embed2=embed2)
+    await ctx.send(embed=embed2)
 
 @client.command()
 async def rybar(ctx):
