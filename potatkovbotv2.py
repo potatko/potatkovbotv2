@@ -104,7 +104,7 @@ async def support(ctx):
         description= "SUPORT: ak chcete ban abo daco tak piste\nkamaratskyspolok492@gmail.com\ntod: vitko.tom@gmail.com\nbrnkj123: brnkj123@gmail.com\nsinksun: tomasko.jakubec@gmail.com\nextra suppport\nradi pomozeme\n<:FeelsSupportMan:668208524412715008>",
         colour= discord.Colour.purple(),
     )
-    embed2.set_image(url= "https://www.nabdsys.com/blogs/wp-content/uploads/2015/11/iStock_000034862400Large-2.jpg")
+    embed2.set_image(url="https://www.nabdsys.com/blogs/wp-content/uploads/2015/11/iStock_000034862400Large-2.jpg")
     await ctx.send(embed2=embed2)
 
 @client.command()
