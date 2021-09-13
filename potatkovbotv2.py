@@ -209,8 +209,7 @@ async def clear_error(ctx, error):
 
 
 @client.command(pass_context=True)
-@commands.has_any_role("DJ")
-async def join(ctx):
+async def play(ctx):
     global voice
     channel = ctx.message.author.voice.channel
     voice = get(client.voice_clients, guild=ctx.guild)
@@ -221,13 +220,9 @@ async def join(ctx):
         voice = await channel.connect()
     await ctx.send(f"Pripojil som sa do {channel}")
 
-@join.error
-async def join_error(ctx, error):
-    if isinstance(error, commands.MissingAnyRole):
-        await ctx.send("Prepáč vyzerá to, že nemáš povolenie na tento príkaz. (DJ) :)")
+
 
 @client.command(pass_context=True)
-@commands.has_any_role("DJ")
 async def leave(ctx):
     channel = ctx.message.author.voice.channel
     voice = get(client.voice_clients, guild=ctx.guild)
@@ -236,10 +231,22 @@ async def leave(ctx):
         await voice.disconnect()
         await ctx.send (f"Odpojil som sa z {channel}")
 
-@leave.error
-async def leave_error(ctx, error):
-    if isinstance(error, commands.MissingAnyRole):
-        await ctx.send("Prepáč vyzerá to, že nemáš povolenie na tento príkaz. (DJ) :)")
+@client.command()
+async def pause(ctx):
+    voice = get(client.voice_clients, guild=ctx.guild)
+    if voice.is_playing():
+        voice.pause()
+    else:
+        await ctx.send("Nič momentálne nehraje")
+
+
+@client.command()
+async def unpause(ctx):
+    voice = get(client.voice_clients, guild=ctx.guild)
+    if voice.is_paused():
+        voice.resume
+    else:
+        await ctx.send("Nič neni pauznuté")
 
     
 
