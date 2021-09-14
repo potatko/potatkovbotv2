@@ -4,8 +4,9 @@ import random
 import shutil
 import asyncio
 import os
+import youtube_dl
 from discord.ext import commands
-from discord.utils import get
+
 
 
 
@@ -208,46 +209,67 @@ async def clear_error(ctx, error):
         await ctx.send("Prepáč vyzerá to, že nemáš povolenie na tento príkaz. (manage_messages) :)")
 
 
-@client.command(pass_context=True)
-async def play(ctx):
-    global voice
-    channel = ctx.message.author.voice.channel
-    voice = get(client.voice_clients, guild=ctx.guild)
+@client.command()
+async def play(ctx, url : str):
+    song_there = os.path.isfile("song.mp3")
+    try:
+        if song_there:
+            os.remove("song.mp3")
+    except PermissionError:
+        await ctx.send("Wait for the current playing music to end or use the 'stop' command")
+        return
 
-    if voice and voice.is_connected():
-        await voice.move_to(channel)
-    else:
-        voice = await channel.connect()
-    await ctx.send(f"Pripojil som sa do {channel}")
+    voiceChannel = discord.utils.get(ctx.guild.voice_channels, name='General')
+    await voiceChannel.connect()
+    voice = discord.utils.get(client.voice_clients, guild=ctx.guild)
+
+    ydl_opts = {
+        'format': 'bestaudio/best',
+        'postprocessors': [{
+            'key': 'FFmpegExtractAudio',
+            'preferredcodec': 'mp3',
+            'preferredquality': '192',
+        }],
+    }
+    with youtube_dl.YoutubeDL(ydl_opts) as ydl:
+        ydl.download([url])
+    for file in os.listdir("./"):
+        if file.endswith(".mp3"):
+            os.rename(file, "song.mp3")
+    voice.play(discord.FFmpegPCMAudio("song.mp3"))
 
 
-
-@client.command(pass_context=True)
+@client.command()
 async def leave(ctx):
-    channel = ctx.message.author.voice.channel
-    voice = get(client.voice_clients, guild=ctx.guild)
-
-    if voice and voice.is_connected():
+    voice = discord.utils.get(client.voice_clients, guild=ctx.guild)
+    if voice.is_connected():
         await voice.disconnect()
-        await ctx.send (f"Odpojil som sa z {channel}")
+    else:
+        await ctx.send("The bot is not connected to a voice channel.")
+
 
 @client.command()
 async def pause(ctx):
-    voice = get(client.voice_clients, guild=ctx.guild)
+    voice = discord.utils.get(client.voice_clients, guild=ctx.guild)
     if voice.is_playing():
         voice.pause()
     else:
-        await ctx.send("Nič momentálne nehraje")
+        await ctx.send("Currently no audio is playing.")
 
 
 @client.command()
-async def unpause(ctx):
-    voice = get(client.voice_clients, guild=ctx.guild)
+async def resume(ctx):
+    voice = discord.utils.get(client.voice_clients, guild=ctx.guild)
     if voice.is_paused():
-        voice.resume
+        voice.resume()
     else:
-        await ctx.send("Nič neni pauznuté")
+        await ctx.send("The audio is not paused.")
 
+
+@client.command()
+async def stop(ctx):
+    voice = discord.utils.get(client.voice_clients, guild=ctx.guild)
+    voice.stop()
     
 
 @client.command()
